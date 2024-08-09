@@ -1,26 +1,19 @@
 {
   "name": "assignment",
+  "version": "1.0.0",
   "devDependencies": {
-    "@ethereum-waffle/chai": "^4.0.10",
-    "@ethereum-waffle/compiler": "^4.0.3",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
     "@nomicfoundation/hardhat-ethers": "^3.0.6",
-    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.5",
-    "@nomicfoundation/hardhat-network-helpers": "^1.0.11",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@nomicfoundation/hardhat-verify": "^2.0.9",
     "@openzeppelin/hardhat-upgrades": "^3.2.1",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
-    "@types/chai": "^4.3.17",
-    "@types/mocha": "^10.0.7",
-    "chai": "^5.1.1",
-    "ethereum-waffle": "^4.0.10",
+    "chai": "^4.5.0",
     "ethers": "^6.13.2",
     "hardhat": "^2.22.4",
     "hardhat-contract-sizer": "^2.8.0",
     "hardhat-deploy": "^0.12.4",
-    "hardhat-gas-reporter": "^2.2.0",
+    "hardhat-gas-reporter": "^1.0.8",
     "prettier": "^3.2.5",
     "solidity-coverage": "^0.8.12",
     "ts-node": "^10.9.2",
@@ -28,14 +21,12 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
-    "dotenv": "^16.0.0",
-    "prettier-plugin-solidity": "^1.0.0-beta.19",
-    "solhint": "^5.0.1"
+    "@openzeppelin/contracts-upgradeable": "^5.0.2",
+    "dotenv": "^16.4.5"
   },
   "scripts": {
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
-    "format": "prettier --write .",
-    "licenses": "license-checker --json > licenses.json && node extract-licenses.js"
+    "format": "prettier --write ."
   }
 }

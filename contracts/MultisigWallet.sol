@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-contract MultisigWallet is Ownable, Initializable {
+contract MultisigWallet is Initializable, OwnableUpgradeable {
     address[] public signers;
     uint256 public requiredSignatures;
     mapping(uint256 => Transaction) public transactions;
@@ -29,8 +29,12 @@ contract MultisigWallet is Ownable, Initializable {
     }
 
     function initialize(address[] memory _signers, uint256 _requiredSignatures) public initializer {
+        // Directly initialize OwnableUpgradeable
+        __Ownable_init();
+        
         require(_signers.length == 3, "Requires exactly 3 signers");
         require(_requiredSignatures == 2, "Requires exactly 2 signatures");
+        
         signers = _signers;
         requiredSignatures = _requiredSignatures;
     }
