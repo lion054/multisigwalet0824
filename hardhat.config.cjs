@@ -1,8 +1,9 @@
+// hardhat.config.cjs
+
 require("@nomicfoundation/hardhat-ethers");
 require("@openzeppelin/hardhat-upgrades");
 require("@typechain/hardhat");
 require("@nomicfoundation/hardhat-toolbox");
-
 
 module.exports = {
   solidity: {
