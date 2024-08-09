@@ -2,7 +2,6 @@
 
 This project implements an upgradeable multisig wallet smart contract using Solidity. The wallet requires 2 out of 3 signers to approve transactions and supports upgrades via a proxy pattern.
 
-The `MultisigWallet` contract is a secure and upgradeable multisig wallet that requires 2 out of 3 signers to approve transactions. It uses OpenZeppelin's `Ownable` for access control and `Initializable` for upgradeability, allowing signers to propose, approve, and execute transactions while ensuring unauthorized actions are prevented. The contract includes measures to protect against common vulnerabilities and maintains state integrity during upgrades using proxy patterns. Comprehensive tests cover all essential functions, including transaction proposals, approvals, executions, and upgrades, ensuring the contract works reliably and securely.
 
 ## Features
 
@@ -21,7 +20,10 @@ The `MultisigWallet` contract is a secure and upgradeable multisig wallet that r
 1. Clone the repository.
 2. Install dependencies:
     ```bash
-    npm install
+    npm install ethers@^5.0.0
+    npm install @nomiclabs/hardhat-ethers@latest
+    npm install --legacy-peer-deps
+
     ```
 3. Deploy the contract:
     ```bash
