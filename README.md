@@ -20,8 +20,7 @@ This project implements an upgradeable multisig wallet smart contract using Soli
 1. Clone the repository.
 2. Install dependencies:
     ```bash
-    npm install ethers@^5.0.0
-    npm install @nomiclabs/hardhat-ethers@latest
+  
     npm install --legacy-peer-deps
 
     ```
